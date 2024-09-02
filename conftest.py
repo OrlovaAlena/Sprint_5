@@ -1,5 +1,6 @@
 import pytest
 from selenium import webdriver
+
 from src.config import Config
 
 
@@ -9,3 +10,5 @@ def driver():
     chrome.get(Config.URL)
     yield chrome
     chrome.quit()
+
+

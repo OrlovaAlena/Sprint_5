@@ -9,7 +9,8 @@ class Elements:
     LOGO = By.XPATH, './/div[contains(@class, "header__logo")]'
 
     CREATE_ACCOUNT_BUTTON = By.CSS_SELECTOR, "a[href = '/register'"
-    COMPLETE_BUTTON = By.CSS_SELECTOR, 'form button'
+    COMPLETE_BUTTON = By.XPATH, ".//form/button[text() = 'Зарегистрироваться']"
+    CONFIRM_LOGIN_BUTTON = By.XPATH, ".//form/button[text() = 'Войти']"
     LOG_IN_BUTTON = By.CSS_SELECTOR, "a[href = '/login'"
     PASSWORD_BUTTON = By.CSS_SELECTOR, "a[href = '/forgot-password'"
 
@@ -17,7 +18,7 @@ class Elements:
     EMAIL_INPUT = By.XPATH, ".//div[label[text()='Email']]/input"
     PASSWORD_INPUT = By.NAME, 'Пароль'
     ENTER_SIGN = By.XPATH, ".//h2[text()='Вход']"
-    INPUT_ERROR_MASSAGE = By.CSS_SELECTOR, '.input error'
+    INPUT_ERROR_MASSAGE = By.XPATH, ".//p[contains(@class, 'input__error')]"
 
     PROFILE_BUTTON = By.XPATH, ".//a[text()='Профиль']"
     EXIT_BUTTON = By.XPATH, ".//button[text()='Выход']"
@@ -25,7 +26,3 @@ class Elements:
     SAUCES_TAB = By.XPATH, ".//span[text()='Соусы']/parent::div"
     BUNS_TAB = By.XPATH, ".//span[text()='Булки']/parent::div"
     FILLINGS_TAB = By.XPATH, ".//span[text()='Начинки']/parent::div"
-
-    SAUCES_SELECTED = By.XPATH, ".//span[text() = 'Соусы']/parent::div[contains(@class, 'current')]"
-    BUNS_SELECTED = By.XPATH, ".//span[text() = 'Булки']/parent::div[contains(@class, 'current')]"
-    FILLINGS_SELECTED = By.XPATH, ".//span[text() = 'Начинки']/parent::div[contains(@class, 'current')]"
